@@ -1,3 +1,5 @@
+import DisplayedStreamer from "./DisplayStreamer"
+
 function Center() {
     return (
         <div id="center">
@@ -9,9 +11,9 @@ function Center() {
                 :
                 <span style={{ paddingLeft: "10px" }}>45</span>
             </div>
-            <div className="displayed_streamer" id="displayed_streamer1"></div>
-            <div className="displayed_streamer" id="displayed_streamer2"></div>
-            <div className="displayed_streamer" id="displayed_streamer3"></div>
+            <DisplayedStreamer i={1} left="80%"></DisplayedStreamer>
+            <DisplayedStreamer i={2} bottom="18%" left="20%"></DisplayedStreamer>
+            <DisplayedStreamer i={3} ></DisplayedStreamer>
         </div>
     )
 }

@@ -222,7 +222,7 @@ button {
     color: var(--onhover_color);
 }
 
-.displayed_streamer {
+.displayed_streamer_hidden{
     display: block;
     position: relative;
     width: 15%;

@@ -1,49 +1,31 @@
 import React from 'react'
-import { useState } from 'react'
 import ReactDOM from 'react-dom/client'
-import Header from './Header.tsx'
-import Content from './Content.tsx'
-import CreateAccount from './CreateAccount.tsx'
-import Login from './Login.tsx'
+import Header from './Header/Header.tsx'
+import Content from './Content/Content.tsx'
+import CreateAccount from './Authentification/CreateAccount.tsx'
+import Login from './Authentification/Login.tsx'
 import './stylesheet.css'
+import { BrowserRouter,Route,Routes} from 'react-router-dom'
+// import fetch from 'node-fetch'
 
 
-function MainView() {
-  const [currView, setView] = useState("main")
-
-  function loginState() {
-    setView("login")
-  }
-  function newAccountState() {
-    setView("createAccount")
-  }
-  function mainState(){
-    setView("main")
-  }
-
-  if (currView == "main") {
-    return (
-      <React.StrictMode>
-        <Header login={loginState} createAccount={newAccountState}></Header>
-        <Content login={loginState} createAccount={newAccountState}></Content>
+function Main() {
+  return(
+    <React.StrictMode>
+        <Header ></Header>
+        <Content></Content>
       </React.StrictMode>
-    )
-  }
-  if (currView == "login") {
-    return (
-      <Login main={mainState} Link={newAccountState}/>
-    )
-  }
-  if (currView == "createAccount") {
-    return (
-      <CreateAccount main={mainState} Link={loginState}/>
-    )
-  }
-}
-function View() {
-  return (
-    <MainView />
   )
 }
 
-ReactDOM.createRoot(document.getElementById('root')!).render(View())
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <BrowserRouter>
+  <Routes>
+    <Route path='/'>
+      <Route index element={<Main/>}></Route>
+      <Route path='Login' element={<Login/>}></Route>
+      <Route path='CreateAccount' element={<CreateAccount/>}></Route>
+    </Route>
+  </Routes>
+  </BrowserRouter>
+)
