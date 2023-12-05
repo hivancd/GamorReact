@@ -19,6 +19,7 @@ function StreamerItem(props:{TeamName:string, position: number, img: string}) {
     )
 }
 
+
 function Streamers() {
     return (
         <ul>

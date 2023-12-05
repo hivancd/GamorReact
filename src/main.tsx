@@ -6,8 +6,7 @@ import CreateAccount from './Authentification/CreateAccount.tsx'
 import Login from './Authentification/Login.tsx'
 import './stylesheet.css'
 import { BrowserRouter,Route,Routes} from 'react-router-dom'
-// import fetch from 'node-fetch'
-
+import {twitch_access_token} from './core/services/twitch/app_access_token.tsx'
 
 function Main() {
   return(
