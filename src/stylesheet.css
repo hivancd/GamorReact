@@ -10,6 +10,9 @@
     --center_color: rgb(254, 137, 68);
     --button_background: rgb(51, 57, 63);
 }
+:root::-webkit-scrollbar{
+    display: none;
+}
 a {
     text-decoration: none;
     cursor: pointer
@@ -246,7 +249,7 @@ button {
 }
 
 #game_streamers {
-    border-radius: 10%;
+    border-radius: 25px;
     background-color: var(--another_background_color);
     display: inline-block;
     margin-left: 10%;
@@ -255,7 +258,7 @@ button {
     background-color: var(--general_background_color);
 }
 
-#game_streamers>button {
+#bottom {
     width: 90%;
     padding: 0%;
     border: 1px;
@@ -266,13 +269,45 @@ button {
     background-color: var(--text_color);
     border-radius: 5px;
 }
-
+#game_streamers>ul::-webkit-scrollbar {
+    display: none;
+  }
 #game_streamers>h5 {
-    margin: 20px;
+    margin: 15px;
+    text-align: center;
 }
 
+#bottom_ret_button{
+    float:right;
+    background-color: transparent;
+    color:var(--add_button_bgcolor);
+    border:0px;
+    position: relative;
+    top:10px;
+    right: 20px;
+    padding: 0%;
+    font-size: large;
+}
+
+
+#search_input{
+    height: 38px;
+    border:0px;
+    padding: 0%;
+    width: 80%;
+    position: relative;
+    left: 5px;
+    top:0.5px;
+    outline: none;
+}
+
+#game_streamers>ul{
+    height: 100px;
+    overflow:scroll
+}
 #game_streamers>ul>li {
-    height: fit-content;
+    height: 20px;
+    overflow: hidden;
 }
 
 .button_image {

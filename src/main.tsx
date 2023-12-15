@@ -9,6 +9,8 @@ import { BrowserRouter,Route,Routes} from 'react-router-dom'
 import {twitch_access_token} from './core/services/twitch/app_access_token.tsx'
 
 function Main() {
+  const authTwitch = async ()=> await twitch_access_token()
+  authTwitch()
   return(
     <React.StrictMode>
         <Header ></Header>

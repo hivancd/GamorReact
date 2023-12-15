@@ -3,6 +3,7 @@ import AuthTemplate from "./AuthT";
 function store() {
     const usernameElement = document.getElementById("user_name") as HTMLInputElement;
     const username = usernameElement.value;
+    
     const pwElement = document.getElementById("pw") as HTMLInputElement;
     const pw = pwElement.value;
     localStorage.setItem(username, pw);
