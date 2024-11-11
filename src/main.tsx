@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Header from './Header/Header.tsx'
 import Content from './Content/Content.tsx'
-import CreateAccount from './Authentification/CreateAccount.tsx'
-import Login from './Authentification/Login.tsx'
+// import CreateAccount from './Authentification/CreateAccount.tsx'
+// import Login from './Authentification/Login.tsx'
 import './stylesheet.css'
 import { BrowserRouter,Route,Routes} from 'react-router-dom'
 import {twitch_access_token} from './core/services/twitch/app_access_token.tsx'
@@ -24,8 +24,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <Routes>
     <Route path='/'>
       <Route index element={<Main/>}></Route>
-      <Route path='Login' element={<Login/>}></Route>
-      <Route path='CreateAccount' element={<CreateAccount/>}></Route>
+      {/* <Route path='Login' element={<Login/>}></Route> */}
+      {/* <Route path='CreateAccount' element={<CreateAccount/>}></Route> */}
     </Route>
   </Routes>
   </BrowserRouter>
